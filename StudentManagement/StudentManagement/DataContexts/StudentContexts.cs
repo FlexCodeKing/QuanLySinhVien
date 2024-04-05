@@ -12,6 +12,8 @@ namespace StudentManagement.DataContexts
         public List<Students> Student { get; set; }
         private readonly string filePath;
 
+
+        //Method read data from CSV file and populate students, update nextStudentId
        public List<Students> ReadDataFromCsvAndUpdateId(string filePath)
         {
             Student = new List<Students>();
@@ -48,6 +50,67 @@ namespace StudentManagement.DataContexts
                         }
                     }
                 }
+            }
+            return Student;
+        }
+
+        private void WriteDataToCsv(string filePath)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.WriteLine("StudentsID, StudentsName, StudentsPhone, StudentsEmail, StudentsAddress");
+
+                foreach(var student in Student)
+                {
+                    writer.WriteLine($"{student.StudentsID},{student.StudentsName},{student.StudentsPhone},{student.StudentsEmail},{student.StudentsAddress}");
+                }
+            }
+        }
+
+        public StudentContexts(string filePath)
+        {
+            this.filePath = filePath;
+            Student = ReadDataFromCsvAndUpdateId(filePath);
+        }
+
+        public void InsertStudent(Students student)
+        {
+            student.StudentsID = nextStudentsId++;
+            Student.Add(student);
+            WriteDataToCsv(filePath);    
+        }
+
+        public void UpdateStudent(int studentId, Students updatedStudent) 
+        {
+            Students existingStudent = Student.FirstOrDefault(s => s.StudentsID == studentId);
+
+            if (existingStudent != null)
+            {
+                existingStudent.StudentsName= updatedStudent.StudentsName;
+                existingStudent.StudentsPhone = updatedStudent.StudentsPhone;
+                existingStudent.StudentsEmail = updatedStudent.StudentsEmail;
+                existingStudent.StudentsAddress = updatedStudent.StudentsAddress;
+
+                WriteDataToCsv(filePath);
+            }
+            else
+            {
+                Console.WriteLine($"Student with Id {studentId} not found!");
+            }
+        }
+
+        public void DeleteStudent(int studentId)
+        {
+            Students studentToRemove = Student.FirstOrDefault(s => s.StudentsID==studentId);
+
+            if(studentToRemove != null)
+            {
+                Student.Remove(studentToRemove);
+                WriteDataToCsv(filePath);
+            }
+            else
+            {
+                Console.WriteLine($"Student with Id {studentId} not found!");
             }
         }
     }
