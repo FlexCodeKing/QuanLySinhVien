@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\mon thay Quang advanced programming\\StudentManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B1A57B-079D-4FFD-9378-D4BEB9884EF2}|StudentManagement\\StudentManagement.csproj|d:\\mon thay quang advanced programming\\studentmanagement\\studentmanagement\\services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B1A57B-079D-4FFD-9378-D4BEB9884EF2}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\services\\studentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B1A57B-079D-4FFD-9378-D4BEB9884EF2}|StudentManagement\\StudentManagement.csproj|d:\\mon thay quang advanced programming\\studentmanagement\\studentmanagement\\studentmanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C7B1A57B-079D-4FFD-9378-D4BEB9884EF2}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\studentmanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B1A57B-079D-4FFD-9378-D4BEB9884EF2}|StudentManagement\\StudentManagement.csproj|d:\\mon thay quang advanced programming\\studentmanagement\\studentmanagement\\datacontexts\\studentcontexts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B1A57B-079D-4FFD-9378-D4BEB9884EF2}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\datacontexts\\studentcontexts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentServices.cs",
+              "DocumentMoniker": "D:\\mon thay Quang advanced programming\\StudentManagement\\StudentManagement\\Services\\StudentServices.cs",
+              "RelativeDocumentMoniker": "StudentManagement\\Services\\StudentServices.cs",
+              "ToolTip": "D:\\mon thay Quang advanced programming\\StudentManagement\\StudentManagement\\Services\\StudentServices.cs",
+              "RelativeToolTip": "StudentManagement\\Services\\StudentServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T10:06:14.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentContexts.cs",
+              "DocumentMoniker": "D:\\mon thay Quang advanced programming\\StudentManagement\\StudentManagement\\DataContexts\\StudentContexts.cs",
+              "RelativeDocumentMoniker": "StudentManagement\\DataContexts\\StudentContexts.cs",
+              "ToolTip": "D:\\mon thay Quang advanced programming\\StudentManagement\\StudentManagement\\DataContexts\\StudentContexts.cs",
+              "RelativeToolTip": "StudentManagement\\DataContexts\\StudentContexts.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T10:04:57.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentManagement.csproj",
+              "DocumentMoniker": "D:\\mon thay Quang advanced programming\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+              "RelativeDocumentMoniker": "StudentManagement\\StudentManagement.csproj",
+              "ToolTip": "D:\\mon thay Quang advanced programming\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+              "RelativeToolTip": "StudentManagement\\StudentManagement.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-05T10:04:28.179Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
