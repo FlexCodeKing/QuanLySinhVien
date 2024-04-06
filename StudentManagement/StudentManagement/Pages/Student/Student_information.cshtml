@@ -52,7 +52,7 @@
                         <td>@students.StudentsEmail</td>
                         <td>@students.StudentsAddress</td>
                         <td>
-                            <a asp-page="/Manager_a/EditManager" asp-route-itemid="@students.StudentsID" class="btn btn-primary">Edit</a>
+                            <a asp-page="/Student/EditStudent" asp-route-itemid="@students.StudentsID" class="btn btn-primary">Edit</a>
                             <form method="post" asp-page-handler="Delete" asp-route-id="@students.StudentsID">
                                 <button class="btn btn-danger">Delete</button>
                             </form>
