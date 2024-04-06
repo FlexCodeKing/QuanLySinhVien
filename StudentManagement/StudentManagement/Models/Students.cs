@@ -10,10 +10,10 @@ namespace StudentManagement.Models
         public int StudentsID {get; set;}
 
         [Required]
-        public string StudentsName {  get; set; }
-        public string StudentsPhone { get; set; }
-        public string StudentsEmail { get; set; }
-        public string StudentsAddress { get; set; }
+        public string? StudentsName {  get; set; }
+        public string? StudentsPhone { get; set; }
+        public string? StudentsEmail { get; set; }
+        public string? StudentsAddress { get; set; }
 
     }
 }
