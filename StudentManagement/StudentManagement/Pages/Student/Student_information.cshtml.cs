@@ -9,7 +9,7 @@ namespace StudentManagement.Pages.Student
     {
         private readonly StudentServices _studentService;
 
-        public IList<Students> StudentList { get; set; } = default;
+        public IList<Students> StudentList { get; set; } = default!;
 
         [BindProperty]
         public Students NewStudent { get; set; } = default!;
