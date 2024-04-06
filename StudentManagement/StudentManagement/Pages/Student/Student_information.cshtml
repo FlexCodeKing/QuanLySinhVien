@@ -4,66 +4,66 @@
     ViewData["Title"] = "StudentList";
 }
 <h1 class="display-4">Student Information'</h1>
-<!-- this is form student information-->
-<form method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="NewStudent.StudentsName" class="control-label"></label>
-        <input asp-for="NewStudent.StudentsName" class="form-control" />
-        <span asp-validation-for="NewStudent.StudentsName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="NewStudent.StudentsPhone" class="control-label"></label>
-        <input asp-for="NewStudent.StudentsPhone" class="form-control" />
-        <span asp-validation-for="NewStudent.StudentsPhone" class="text-danger"></span>
-    </div>
+        <!-- this is form student information-->
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NewStudent.StudentsName" class="control-label"></label>
+                <input asp-for="NewStudent.StudentsName" class="form-control" />
+                <span asp-validation-for="NewStudent.StudentsName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewStudent.StudentsPhone" class="control-label"></label>
+                <input asp-for="NewStudent.StudentsPhone" class="form-control" />
+                <span asp-validation-for="NewStudent.StudentsPhone" class="text-danger"></span>
+            </div>
 
-    <div class="form-group">
-        <label asp-for="NewStudent.StudentsEmail" class="control-label"></label>
-        <input asp-for="NewStudent.StudentsEmail" class="form-control" />
-        <span asp-validation-for="NewStudent.StudentsEmail" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="NewStudent.StudentsAddress" class="control-label"></label>
-        <input asp-for="NewStudent.StudentsAddress" class="form-control" />
-        <span asp-validation-for="NewStudent.StudentsAddress" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
-    </div>
-</form>
+            <div class="form-group">
+                <label asp-for="NewStudent.StudentsEmail" class="control-label"></label>
+                <input asp-for="NewStudent.StudentsEmail" class="form-control" />
+                <span asp-validation-for="NewStudent.StudentsEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewStudent.StudentsAddress" class="control-label"></label>
+                <input asp-for="NewStudent.StudentsAddress" class="form-control" />
+                <span asp-validation-for="NewStudent.StudentsAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
 
-<!-- List of students will go here -->
-<table class="table mt-4">
-    <thead>
-        <tr class="bg-dark text-white">
-            <th scope="col">Name</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Email</th>
-            <th scope="col">Address</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var students in Model.StudentList)
-        {
-            <tr>
-                <td>@students.StudentsName</td>
-                <td>@students.StudentsPhone</td>
-                <td>@students.StudentsEmail</td>
-                <td>@students.StudentsAddress</td>
-                <td>
-                    <a asp-page="/Manager_a/EditManager" asp-route-itemid="@students.StudentsID" class="btn btn-primary">Edit</a>
-                    <form method="post" asp-page-handler="Delete" asp-route-id="@students.StudentsID">
-                        <button class="btn btn-danger">Delete</button>
-                    </form>
+        <!-- List of students will go here -->
+        <table class="table mt-4">
+            <thead>
+                <tr class="bg-dark text-white">
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var students in Model.StudentList)
+                {
+                    <tr>
+                        <td>@students.StudentsName</td>
+                        <td>@students.StudentsPhone</td>
+                        <td>@students.StudentsEmail</td>
+                        <td>@students.StudentsAddress</td>
+                        <td>
+                            <a asp-page="/Manager_a/EditManager" asp-route-itemid="@students.StudentsID" class="btn btn-primary">Edit</a>
+                            <form method="post" asp-page-handler="Delete" asp-route-id="@students.StudentsID">
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
 
-                </td>
-            </tr>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
         }
-    </tbody>
-</table>
-
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
