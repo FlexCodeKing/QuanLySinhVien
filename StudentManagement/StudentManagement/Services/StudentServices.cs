@@ -5,12 +5,18 @@ namespace StudentManagement.Services
 {
     public class StudentServices
     {
-        private readonly StudentContexts _studentContext = default;
-        public IList<Students>Student { get; set; }
+        private readonly StudentContexts _studentContext = default!;
+        public IList<Students> Student { get; set; }
+
+        public StudentServices(StudentContexts studentContext)
+        {
+            _studentContext = studentContext;
+            Student = GetStudent();
+        }
 
        public IList<Students>GetStudent()
         {
-            if(_studentContext != null)
+            if(_studentContext.Student != null)
             {
                 return _studentContext.Student.ToList();
             }
@@ -19,15 +25,15 @@ namespace StudentManagement.Services
 
         public void AddStudent(Students student)
         {
-            if(_studentContext != null)
+            if(_studentContext.Student != null)
             {
                 _studentContext.InsertStudent(student);
             }
         }
 
-        public void UpdateStuden(int id, Students student)
+        public void UpdateStudent(int id, Students student)
         {
-            if(_studentContext != null)
+            if(_studentContext.Student != null)
             {
                 _studentContext.UpdateStudent(id, student);
             }
@@ -35,7 +41,7 @@ namespace StudentManagement.Services
 
         public void DeleteStudent(int id)
         {
-            if (_studentContext != null)
+            if (_studentContext.Student != null)
             {
                 var student = _studentContext.Student.Find(s => s.StudentsID == id);
                 if (student != null)
