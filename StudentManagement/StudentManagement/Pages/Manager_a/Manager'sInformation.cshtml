@@ -1,0 +1,75 @@
+﻿@page
+@model StudentManagement.Pages.Manager_a.Manager_sInformationModel
+@{
+}
+<h1 class="display-4">Manager's Information'</h1>
+<!-- this is form manager's information-->
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="NewInfor.Name" class="control-label"></label>
+        <input asp-for="NewInfor.Name" class="form-control" />
+        <span asp-validation-for="NewInfor.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewInfor.Email" class="control-label"></label>
+        <input asp-for="NewInfor.Email" class="form-control" />
+        <span asp-validation-for="NewInfor.Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NewInfor.Address" class="control-label"></label>
+        <input asp-for="NewInfor.Address" class="form-control" />
+        <span asp-validation-for="NewInfor.Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewInfor.Username" class="control-label"></label>
+        <input asp-for="NewInfor.Username" class="form-control" />
+        <span asp-validation-for="NewInfor.Username" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewInfor.Password" class="control-label"></label>
+        <input asp-for="NewInfor.Password" class="form-control" />
+        <span asp-validation-for="NewInfor.Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<!-- List of pizzas will go here -->
+<table class="table mt-5">
+    <thead>
+        <tr class="bg-dark text-white">
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Username</th>
+            <th scope="col">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var manager in Model.ManagerList)
+        {
+            <tr>
+                <td>@manager.Name</td>
+                <td>@manager.Email</td>
+                <td>@manager.Address</td>
+                <td>@manager.Username</td>
+                <td>@manager.Password</td>
+                <td>
+                    <a asp-page="/Manager_a/EditManager" asp-route-itemid="@manager.Id" class="btn btn-primary">Edit</a>
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@manager.Id">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

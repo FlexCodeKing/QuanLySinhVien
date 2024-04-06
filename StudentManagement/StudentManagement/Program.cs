@@ -14,7 +14,15 @@ builder.Services.AddScoped<StudentContexts>(provider =>
     return new StudentContexts(filePath);
 }
 );
+builder.Services.AddScoped<ManagerService>();
 
+builder.Services.AddScoped<ManagerContext>(providers =>
+{
+    string fileManager = "CSV_File/Manager.csv";
+
+    return new ManagerContext(fileManager);
+}
+);
 
 var app = builder.Build();
 
