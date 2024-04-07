@@ -7,19 +7,19 @@ namespace StudentManagement.DataContexts
     { 
             private int nextID = 1;
             public List<Courses> Courses { get; set; }
-            private readonly string filePath;
+            private readonly string coursesFilePath;
 
-            public CoursesContext(string filePath)
+            public CoursesContext(string coursesFilePah)
             {
-                this.filePath = filePath;
-                Courses = ReadDataFromCsvAndUpdateId(filePath);
+                this.coursesFilePath = coursesFilePath;
+                Courses = ReadDataFromCsvAndUpdateId(coursesFilePath);
             }
 
             public void InsertCourse(Courses course)
             {
                 course.ID = nextID++; // Assign the next available Id and increment the counter
                 Courses.Add(course);
-                WriteDataToCsv(filePath);
+                WriteDataToCsv(coursesFilePath);
             }
 
             public void UpdateCourse(int ID, Courses updatedCourse)
@@ -30,7 +30,7 @@ namespace StudentManagement.DataContexts
                 {
                     existingCourse.CourseName = updatedCourse.CourseName;
 
-                    WriteDataToCsv(filePath);
+                    WriteDataToCsv(coursesFilePath);
                 }
                 else
                 {
@@ -45,7 +45,7 @@ namespace StudentManagement.DataContexts
                 if (courseToRemove != null)
                 {
                     Courses.Remove(courseToRemove);
-                    WriteDataToCsv(filePath);
+                    WriteDataToCsv(coursesFilePath);
                 }
                 else
                 {
@@ -54,14 +54,14 @@ namespace StudentManagement.DataContexts
             }
 
             // Method to read data from a CSV file and populate Courses, updating nextID
-            public List<Courses> ReadDataFromCsvAndUpdateId(string filePath)
+            public List<Courses> ReadDataFromCsvAndUpdateId(string coursesFilePathh)
             {
                 Courses = new List<Courses>();
                 nextID = 1; // Reset the counter
 
-                if (File.Exists(filePath))
+                if (File.Exists(coursesFilePath))
                 {
-                    using (StreamReader reader = new StreamReader(filePath))
+                    using (StreamReader reader = new StreamReader(coursesFilePath))
                     {
                         // Skip the header line
                         reader.ReadLine();
@@ -94,9 +94,9 @@ namespace StudentManagement.DataContexts
                 return Courses;
             }
 
-            private void WriteDataToCsv(string filePath)
+            private void WriteDataToCsv(string coursesFilePath)
             {
-                using (StreamWriter writer = new StreamWriter(filePath))
+                using (StreamWriter writer = new StreamWriter(coursesFilePath))
                 {
                     // Write header
                     writer.WriteLine("ID,CourseName");
