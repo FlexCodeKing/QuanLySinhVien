@@ -17,13 +17,13 @@ namespace StudentManagement.Pages.Student
         [BindProperty]
         public Students Student { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? studentId)
+        public async Task<IActionResult> OnGetAsync(int? itemid)
         {
-            if(studentId == null)
+            if(itemid == null)
             {
                 return NotFound();
             }
-            var student = _studentService.Student.FirstOrDefault(s => s.StudentsID == studentId);
+            var student = _studentService.Student.FirstOrDefault(s => s.StudentsID == itemid);
             if (student == null)
             {
                 return NotFound();
