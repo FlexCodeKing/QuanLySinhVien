@@ -39,7 +39,7 @@ namespace StudentManagement.Pages.Student
                 return Page();
             }
             _studentService.UpdateStudent(Student.StudentsID, Student);
-            return RedirectToPage(nameof(Index));
+            return Redirect("~/../Student/Studen_information");
         }
     }
 }

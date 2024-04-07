@@ -40,7 +40,7 @@ namespace StudentManagement.Pages.Manager_a
                 return Page();
             }
             _service.UpdateManager(Managers.Id, Managers);
-            return RedirectToPage(nameof(Index));
+            return Redirect("~/../Manager_a/Manager'sInformation");
         }
     }
 }
