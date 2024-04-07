@@ -29,3 +29,34 @@ C:\Users\admin\OneDrive\Máy tính\QuanLySinhVien\StudentManagement\StudentManag
 C:\Users\admin\OneDrive\Máy tính\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.pdb
 C:\Users\admin\OneDrive\Máy tính\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.genruntimeconfig.cache
 C:\Users\admin\OneDrive\Máy tính\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\ref\StudentManagement.dll
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\bin\Debug\net7.0\appsettings.Development.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\bin\Debug\net7.0\appsettings.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\bin\Debug\net7.0\StudentManagement.staticwebassets.runtime.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\bin\Debug\net7.0\StudentManagement.exe
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\bin\Debug\net7.0\StudentManagement.deps.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\bin\Debug\net7.0\StudentManagement.runtimeconfig.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\bin\Debug\net7.0\StudentManagement.dll
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\bin\Debug\net7.0\StudentManagement.pdb
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.GeneratedMSBuildEditorConfig.editorconfig
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.AssemblyInfoInputs.cache
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.AssemblyInfo.cs
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.csproj.CoreCompileInputs.cache
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.MvcApplicationPartsAssemblyInfo.cache
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.RazorAssemblyInfo.cache
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.RazorAssemblyInfo.cs
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.sourcelink.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\staticwebassets.build.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\staticwebassets.development.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\staticwebassets\msbuild.StudentManagement.Microsoft.AspNetCore.StaticWebAssets.props
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\staticwebassets\msbuild.build.StudentManagement.props
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.StudentManagement.props
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.StudentManagement.props
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\staticwebassets.pack.json
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\scopedcss\bundle\StudentManagement.styles.css
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\scopedcss\projectbundle\StudentManagement.bundle.scp.css
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.dll
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\refint\StudentManagement.dll
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.pdb
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\StudentManagement.genruntimeconfig.cache
+D:\mon thay Quang advanced programming\QuanLySinhVien\StudentManagement\StudentManagement\obj\Debug\net7.0\ref\StudentManagement.dll
