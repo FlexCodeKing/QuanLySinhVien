@@ -2,7 +2,7 @@
 
 namespace StudentManagement.Models
 {
-    public class Courses
+    public class modelCourses
     {
         [Key]
         public int ID { get; set; }
