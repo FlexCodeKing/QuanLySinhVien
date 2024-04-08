@@ -39,7 +39,8 @@ namespace StudentManagement.DataContexts
                                 StudentsPhone = values[2],
                                 StudentsEmail = values[3],
                                 StudentsAddress = values[4],
-                                
+                                Studentsusername = values[5],
+                                Studentspassword = values[6],
                             };
 
                             Student.Add(student);
@@ -63,7 +64,8 @@ namespace StudentManagement.DataContexts
 
                 foreach(var student in Student)
                 {
-                    writer.WriteLine($"{student.StudentsID},{student.StudentsName},{student.StudentsPhone},{student.StudentsEmail},{student.StudentsAddress},{student.Studentsusername},{student.Studentspassword}");
+                    writer.WriteLine($"{student.StudentsID},{student.StudentsName},{student.StudentsPhone},{student.StudentsEmail}," +
+                        $"{student.StudentsAddress},{student.Studentsusername},{student.Studentspassword}, {student.Studentsusername},{student.Studentspassword}");
                 }
             }
         }
@@ -91,6 +93,8 @@ namespace StudentManagement.DataContexts
                 existingStudent.StudentsPhone = updatedStudent.StudentsPhone;
                 existingStudent.StudentsEmail = updatedStudent.StudentsEmail;
                 existingStudent.StudentsAddress = updatedStudent.StudentsAddress;
+                existingStudent.Studentsusername = updatedStudent.Studentsusername;
+                existingStudent.Studentspassword = updatedStudent.Studentspassword;
 
                 WriteDataToCsv(filePath);
             }

@@ -32,6 +32,16 @@
                 <span asp-validation-for="Student.StudentsAddress" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Student.Studentsusername" class="control-label"></label>
+                <input asp-for="Student.Studentsusername" class="form-control" />
+                <span asp-validation-for="Student.Studentsusername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Studentspassword" class="control-label"></label>
+                <input asp-for="Student.Studentspassword" class="form-control" />
+                <span asp-validation-for="Student.Studentspassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Update" class="btn btn-primary" />
             </div>
         </form>
