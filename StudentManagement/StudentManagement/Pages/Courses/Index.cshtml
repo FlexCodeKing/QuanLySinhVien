@@ -1,0 +1,53 @@
+﻿@page
+@model StudentManagement.Pages.Courses.IndexModel
+@{
+    ViewData["Title"] = "C List 🍕";
+}
+
+
+<h1 class="display-4">C List 🍕</h1>
+<!-- New Pizza form will go here -->
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="NewCourse.CourseName" class="control-label"></label>
+        <input asp-for="NewCourse.CourseName" class="form-control" />
+        <span asp-validation-for="NewCourse.CourseName" class="text-danger"></span>
+    </div>
+
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<!-- List of pizzas will go here -->
+<table class="table mt-5">
+    <thead>
+        <tr class="bg-dark text-white">
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model.CourseList)
+        {
+            <tr>
+                <td>@course.ID</td>
+                <td>@($"{course.CourseName:C}")</td>
+
+                <td>
+                    <a asp-page="/Pizzas/Edit" asp-route-itemid="@course.ID" class="btn btn-primary">Edit</a>
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@course.ID">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
