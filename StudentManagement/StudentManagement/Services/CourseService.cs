@@ -7,43 +7,43 @@ namespace StudentManagement.Services
     {
         //private readonly PizzaContext _context = default!;
         private readonly CoursesContext _context = default!;
-        public IList<Courses> Courses { get; set; }
+        public IList<modelCourses> ACourses { get; set; }
         public CoursesService(CoursesContext context)
         {
             _context = context;
-            Courses = GetCourses();
+            ACourses = GetCourses();
         }
 
-        public IList<Courses> GetCourses()
+        public IList<modelCourses> GetCourses()
         {
-            if (_context.Courses != null)
+            if (_context.Course != null)
             {
-                return _context.Courses.ToList();
+                return _context.Course.ToList();
             }
-            return new List<Courses>();
+            return new List<modelCourses>();
         }
 
-        public void AddCourses(Courses courses)
+        public void AddCourses(modelCourses courses)
         {
-            if (_context.Courses != null)
+            if (_context.Course != null)
             {
                 _context.InsertCourse(courses);
 
             }
         }
-        public void Updateourses(int id, Courses courses)
+        public void UpdateCourses(int id, modelCourses courses)
         {
-            if (_context.Courses != null)
+            if (_context.Course != null)
             {
                 _context.UpdateCourse(id, courses);
             }
         }
 
-        public void Deletecoursesa(int id)
+        public void Deletecourses(int id)
         {
-            if (_context.Courses != null)
+            if (_context.Course != null)
             {
-                var courses = _context.Courses.Find(p => p.ID == id);
+                var courses = _context.Course.Find(p => p.ID == id);
                 if (courses != null)
                 {
                     _context.DeleteCourse(id);
