@@ -30,7 +30,7 @@ namespace StudentManagement.DataContexts
                         string line = reader.ReadLine();
                         string[] values = line.Split(',');
 
-                        if (values.Length >= 5) 
+                        if (values.Length >= 7) 
                         {
                             Students student = new Students
                             {
@@ -39,6 +39,7 @@ namespace StudentManagement.DataContexts
                                 StudentsPhone = values[2],
                                 StudentsEmail = values[3],
                                 StudentsAddress = values[4],
+                                
                             };
 
                             Student.Add(student);
@@ -58,11 +59,11 @@ namespace StudentManagement.DataContexts
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                writer.WriteLine("StudentsID, StudentsName, StudentsPhone, StudentsEmail, StudentsAddress");
+                writer.WriteLine("StudentsID, StudentsName, StudentsPhone, StudentsEmail, StudentsAddress, Studentsusername,Studentspassword");
 
                 foreach(var student in Student)
                 {
-                    writer.WriteLine($"{student.StudentsID},{student.StudentsName},{student.StudentsPhone},{student.StudentsEmail},{student.StudentsAddress}");
+                    writer.WriteLine($"{student.StudentsID},{student.StudentsName},{student.StudentsPhone},{student.StudentsEmail},{student.StudentsAddress},{student.Studentsusername},{student.Studentspassword}");
                 }
             }
         }

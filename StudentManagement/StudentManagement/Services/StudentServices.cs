@@ -1,4 +1,5 @@
-﻿using StudentManagement.DataContexts;
+﻿using Microsoft.AspNetCore.Mvc;
+using StudentManagement.DataContexts;
 using StudentManagement.Models;
 
 namespace StudentManagement.Services
@@ -13,8 +14,15 @@ namespace StudentManagement.Services
             _studentContext = studentContext;
             Student = GetStudent();
         }
+       
 
-       public IList<Students>GetStudent()
+        public Students GetStudentByUsername(string username)
+        {
+            // Lấy thông tin học sinh từ context dựa trên tên đăng nhập
+            return _studentContext.Student.FirstOrDefault(d => d.StudentsName == username);
+        }
+
+        public IList<Students>GetStudent()
         {
             if(_studentContext.Student != null)
             {

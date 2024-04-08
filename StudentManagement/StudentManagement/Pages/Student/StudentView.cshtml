@@ -1,31 +1,19 @@
-﻿@page
-@model StudentManagement.Pages.Student.StudentViewModel
+﻿
+@page
+@model StudentManagement.Pages.Studentsss.StudentViewModel
+@{
+    ViewData["Title"] = "Student Information";
+}
 
-<form method="post">
-    <div class="form-group">
-        <label for="StudentsName">Tên:</label>
-        <input type="text" class="form-control" id="StudentsName" name="StudentsName" value="UserInfo.Name" required>
-    </div>
+<h1>Student Information</h1>
 
-    <div class="form-group">
-        <label for="StudentsPhone">Số điện thoại:</label>
-        <input type="text" class="form-control" id="StudentsPhone" name="StudentsPhone" value="UserInfo.Phone" required>
-    </div>
-
-    <div class="form-group">
-        <label for="StudentsEmail">Email:</label>
-        <input type="email" class="form-control" id="StudentsEmail" name="StudentsEmail" value="UserInfo.Email" required>
-    </div>
-
-    <div class="form-group">
-        <label for="StudentsAddress">Địa chỉ:</label>
-        <input type="text" class="form-control" id="StudentsAddress" name="StudentsAddress" value="UserInfo.Address" required>
-    </div>
-
-    <div class="form-group">
-        <label for="Password">Mật khẩu:</label>
-        <input type="password" class="form-control" id="Password" name="Password" value="UserInfo.Password" required>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Cập nhật thông tin</button>
-</form>
+<div>
+    <h3>Name: @Model.Student.StudentsName</h3>
+    <p>Student ID: @Model.Student.StudentsID</p>
+    <p>Phone: @Model.Student.StudentsPhone</p>
+    <p>Email: @Model.Student.StudentsEmail</p>
+    <p>Address: @Model.Student.StudentsAddress</p>
+</div>
+@section Scripts {
+                <partial name="_ValidationScriptsPartial" />
+        }

@@ -14,8 +14,16 @@
         <input asp-for="NewCourse.CourseName" class="form-control" />
         <span asp-validation-for="NewCourse.CourseName" class="text-danger"></span>
     </div>
-
-
+    <div class="form-group">
+        <label asp-for="NewCourse.CourseDayofweek" class="control-label"></label>
+        <input asp-for="NewCourse.CourseDayofweek" class="form-control" />
+        <span asp-validation-for="NewCourse.CourseDayofweek" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewCourse.CourseTime" class="control-label"></label>
+        <input asp-for="NewCourse.CourseTime" class="form-control" />
+        <span asp-validation-for="NewCourse.CourseTime" class="text-danger"></span>
+    </div>
     <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />
     </div>
@@ -26,6 +34,8 @@
     <thead>
         <tr class="bg-dark text-white">
             <th scope="col">Name</th>
+            <th scope="col">Day Of Week</th>
+            <th scope="col">Day Time</th>
         </tr>
     </thead>
     <tbody>
@@ -33,10 +43,11 @@
         {
             <tr>
                 <td>@course.ID</td>
-                <td>@($"{course.CourseName:C}")</td>
-
+                <td>@course.CourseName</td>
+                 <td>@course.CourseDayofweek</td>
+                <td>@course.CourseTime</td>
                 <td>
-                    <a asp-page="/Pizzas/Edit" asp-route-itemid="@course.ID" class="btn btn-primary">Edit</a>
+                    <a asp-page="/Courses/Edit" asp-route-itemid="@course.ID" class="btn btn-primary">Edit</a>
                     <form method="post" asp-page-handler="Delete" asp-route-id="@course.ID">
                         <button class="btn btn-danger">Delete</button>
                     </form>

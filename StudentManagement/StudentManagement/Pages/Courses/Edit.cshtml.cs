@@ -39,7 +39,7 @@ namespace StudentManagement.Pages.Courresess
                 return Page();
             }
             _service.UpdateCourses(ACourse.ID, ACourse);
-            return RedirectToPage(nameof(Index));
+            return Redirect("~/../Courses/Index");
         }
     }
 }

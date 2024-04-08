@@ -8,5 +8,7 @@ namespace StudentManagement.Models
         public int ID { get; set; }
         [Required]
         public string? CourseName { get; set; }
+        public string? CourseDayofweek { get; set; }
+        public string? CourseTime { get; set; }
     }
 }

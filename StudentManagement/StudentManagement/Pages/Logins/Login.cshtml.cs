@@ -35,6 +35,7 @@ namespace StudentManagement.Pages.Logins
                         }
                     }
                 }
+                HttpContext.Session.SetString("Username", username);
             }
             else if (role == "student")
             {
@@ -53,11 +54,12 @@ namespace StudentManagement.Pages.Logins
 
                             if (storedUsername == username && storedPassword == password)
                             {
-                                return Redirect("~/../Student/StudenView");
+                                return Redirect("~/../Student/StudentView");
                             }
                         }
                     }
                 }
+                HttpContext.Session.SetString("Username", username);
             }
 
               

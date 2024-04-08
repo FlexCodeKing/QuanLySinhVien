@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
@@ -90,5 +90,53 @@ namespace StudentManagement.Pages.Student
         public string Address { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+    }
+}
+*/
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using StudentManagement.Models;
+using StudentManagement.Services;
+
+namespace StudentManagement.Pages.Studentsss
+{
+    public class StudentViewModel : PageModel
+    {
+        private readonly StudentServices _studentCsvService;
+
+        public StudentViewModel(StudentServices studentCsvService)
+        {
+            _studentCsvService = studentCsvService;
+        }
+
+        public Students Student { get; set; }
+
+        public IActionResult OnGet()
+        {
+            // Kiểm tra xem đã đăng nhập hay chưa
+            if (HttpContext.User.Identity.IsAuthenticated)
+            {
+                // Lấy tên đăng nhập từ thông tin đăng nhập
+                string username = HttpContext.User.Identity.Name;
+
+                // Lấy thông tin học sinh từ tên đăng nhập
+                Student = _studentCsvService.GetStudentByUsername(username);
+
+                // Kiểm tra xem học sinh có tồn tại hay không
+                if (Student == null)
+                {
+                    // Trả về lỗi nếu không tìm thấy học sinh
+                    return NotFound();
+                }
+
+                // Trả về trang với thông tin của học sinh đã đăng nhập
+                return Page();
+            }
+            else
+            {
+                // Nếu chưa đăng nhập, chuyển hướng về trang đăng nhập
+                return RedirectToPage("/Logins/Login");
+            }
+        }
     }
 }

@@ -16,6 +16,17 @@
                 <input asp-for="ACourse.CourseName" class="form-control" />
                 <span asp-validation-for="ACourse.CourseName" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label asp-for="ACourse.CourseDayofweek" class="control-label"></label>
+                <input asp-for="ACourse.CourseDayofweek" class="form-control" />
+                <span asp-validation-for="ACourse.CourseDayofweek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ACourse.CourseTime" class="control-label"></label>
+                <input asp-for="ACourse.CourseTime" class="form-control" />
+                <span asp-validation-for="ACourse.CourseTime" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Update" class="btn btn-primary" />
             </div>

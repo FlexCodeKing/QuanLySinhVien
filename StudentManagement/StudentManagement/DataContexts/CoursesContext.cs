@@ -71,12 +71,14 @@ namespace StudentManagement.DataContexts
                         string line = reader.ReadLine();
                         string[] values = line.Split(',');
 
-                        if (values.Length >= 2)
+                        if (values.Length >= 4)
                         {
                             modelCourses course = new modelCourses
                             {
                                 ID = int.Parse(values[0]),
                                 CourseName = values[1],
+                                CourseDayofweek = values[2],
+                                CourseTime = values[3]
                             };
 
                             Course.Add(course);
@@ -99,12 +101,12 @@ namespace StudentManagement.DataContexts
             using (StreamWriter writer = new StreamWriter(coursesFilePath))
             {
                 // Write header
-                writer.WriteLine("ID,CourseName");
+                writer.WriteLine("ID,CourseName,CourseDayOfWeek, CourseTime");
 
                 // Write data rows
                 foreach (var course in Course)
                 {
-                    writer.WriteLine($"{course.ID},{course.CourseName}");
+                    writer.WriteLine($"{course.ID},{course.CourseName},{course.CourseDayofweek},{course.CourseTime}");
                 }
             }
         }
