@@ -39,7 +39,8 @@ namespace StudentManagement.DataContexts
                                 StudentsPhone = values[2],
                                 StudentsEmail = values[3],
                                 StudentsAddress = values[4],
-                                
+                                Studentsusername = values[5],
+                                Studentspassword = values[6],
                             };
 
                             Student.Add(student);
