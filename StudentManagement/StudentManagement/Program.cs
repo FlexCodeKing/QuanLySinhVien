@@ -8,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+// ... other middleware configurations
+
 builder.Services.AddScoped<StudentServices>();
 
 builder.Services.AddScoped<StudentContexts>(provider =>

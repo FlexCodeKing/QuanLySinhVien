@@ -93,7 +93,7 @@ namespace StudentManagement.Pages.Student
     }
 }
 */
-using Microsoft.AspNetCore.Mvc;
+/*using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using StudentManagement.Models;
 using StudentManagement.Services;
@@ -140,3 +140,35 @@ namespace StudentManagement.Pages.Studentsss
         }
     }
 }
+*/
+
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using StudentManagement.Models;
+using StudentManagement.Services;
+using System.Linq;
+
+namespace StudentManagement.Pages.Student
+{
+    public class StudentViewModel : PageModel
+    {
+        private readonly StudentServices _studentService;
+
+        public Students Student { get; set; } = new Students();
+
+        public StudentViewModel(StudentServices studentService)
+        {
+            _studentService = studentService;
+        }
+
+        public void OnGet()
+        {
+            string username = HttpContext.Session.GetString("Username");
+
+            Student = _studentService.GetStudentByUsername(username);
+        }
+    }
+}
+
+

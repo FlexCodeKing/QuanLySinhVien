@@ -1,19 +1,29 @@
-﻿
-@page
-@model StudentManagement.Pages.Studentsss.StudentViewModel
+﻿@page
+@model StudentManagement.Pages.Student.StudentViewModel
 @{
     ViewData["Title"] = "Student Information";
 }
 
-<h1>Student Information</h1>
+<h1 class="display-4">Student Information</h1>
 
-<div>
-    <h3>Name: @Model.Student.StudentsName</h3>
-    <p>Student ID: @Model.Student.StudentsID</p>
-    <p>Phone: @Model.Student.StudentsPhone</p>
-    <p>Email: @Model.Student.StudentsEmail</p>
-    <p>Address: @Model.Student.StudentsAddress</p>
-</div>
+<table class="table mt-4">
+    <thead>
+        <tr class="bg-dark text-white">
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Student.StudentsName</td>
+            <td>@Model.Student.StudentsPhone</td>
+            <td>@Model.Student.StudentsEmail</td>
+            <td>@Model.Student.Studentsusername</td>
+        </tr>
+    </tbody>
+</table>
+
 @section Scripts {
-                <partial name="_ValidationScriptsPartial" />
-        }
+}
