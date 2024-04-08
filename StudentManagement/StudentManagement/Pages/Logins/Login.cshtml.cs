@@ -1,12 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Security.Cryptography.X509Certificates;
 
 namespace StudentManagement.Pages.Logins
 {
     public class LoginModel : PageModel
+
     {
+      
         public IActionResult OnPost(string username, string password, string role)
         {
+            
             if (role == "manager")
             {
                 string managerFilePath = "~/../CSV_File/Manager.csv";
@@ -21,6 +25,7 @@ namespace StudentManagement.Pages.Logins
                         {
                             string storedUsername = fields[4].Trim();
                             string storedPassword = fields[5].Trim();
+
 
                             if (storedUsername == username && storedPassword == password)
                             {
@@ -48,14 +53,14 @@ namespace StudentManagement.Pages.Logins
 
                             if (storedUsername == username && storedPassword == password)
                             {
-                                return Redirect("~/../Student/Studen_information");
+                                return Redirect("~/../Student/StudenView");
                             }
                         }
                     }
                 }
             }
 
-
+              
             /*string filePath = ""; // Đường dẫn tới tệp CSV
 
             if (role == "manager")

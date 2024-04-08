@@ -1,6 +1,6 @@
-ID,CourseName
-1,DataDesign
-2,ApplicationProgram
-3,DSA
-4,BusinessInteligence
-5,DiscreteMath
+ID,CourseName,Dayoftheweek,Time
+1,DataDesign,Monday,7A.M-11A.M
+2,ApplicationProgram,Tuseday,9A.M-11A.M
+3,DSA,Monday,3P.M-5P.M
+4,BusinessInteligence,Wednesday,9A.M-11A.M
+5,DiscreteMath,Thursday,1P.M-5P.M

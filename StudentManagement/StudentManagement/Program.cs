@@ -1,6 +1,8 @@
 using StudentManagement.DataContexts;
 using StudentManagement.Services;
 using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -32,6 +34,7 @@ builder.Services.AddScoped<CoursesContext>(provider =>
     return new CoursesContext(coursesFilePath);
 }
 );
+
 
 
 
