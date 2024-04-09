@@ -2,7 +2,7 @@
 using StudentManagement.Services;
 using StudentManagement.Models;
 using Xunit;
-namespace StudentManagement.Tests
+namespace Courses.Tests
 {
     public class CourseServiceTest
     {
