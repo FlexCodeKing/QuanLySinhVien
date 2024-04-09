@@ -123,7 +123,7 @@ namespace StudentManagement.Pages.Logins
                             string storedPassword = fields[6].Trim();
                             if (storedUsername == username && storedPassword == password)
                             {
-                                return Redirect("/Student/StudenView");
+                                return Redirect("/Student/StudentView");
                             }
                         }
                     }
