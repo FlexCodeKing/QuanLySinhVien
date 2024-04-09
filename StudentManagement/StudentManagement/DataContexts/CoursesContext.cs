@@ -9,7 +9,7 @@ namespace StudentManagement.DataContexts
         public List<modelCourses> Course { get; set; }
         private readonly string coursesFilePath;
 
-        public CoursesContext(string coursesFilePah)
+        public CoursesContext(string coursesFilePath)
         {
             this.coursesFilePath = coursesFilePath;
             Course = ReadDataFromCsvAndUpdateId(coursesFilePath);
@@ -29,7 +29,8 @@ namespace StudentManagement.DataContexts
             if (existingCourse != null)
             {
                 existingCourse.CourseName = updatedCourse.CourseName;
-
+                existingCourse.CourseDayofweek = updatedCourse.CourseDayofweek;
+                existingCourse.CourseTime = updatedCourse.CourseTime;
                 WriteDataToCsv(coursesFilePath);
             }
             else
@@ -54,7 +55,7 @@ namespace StudentManagement.DataContexts
         }
 
         // Method to read data from a CSV file and populate Courses, updating nextID
-        public List<modelCourses> ReadDataFromCsvAndUpdateId(string coursesFilePathh)
+        public List<modelCourses> ReadDataFromCsvAndUpdateId(string coursesFilePath)
         {
             Course = new List<modelCourses>();
             nextID = 1; // Reset the counter
@@ -101,7 +102,7 @@ namespace StudentManagement.DataContexts
             using (StreamWriter writer = new StreamWriter(coursesFilePath))
             {
                 // Write header
-                writer.WriteLine("ID,CourseName,CourseDayOfWeek, CourseTime");
+                writer.WriteLine("ID,CourseName,CourseDayOfWeek,CourseTime");
 
                 // Write data rows
                 foreach (var course in Course)
