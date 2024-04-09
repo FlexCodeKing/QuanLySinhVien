@@ -139,6 +139,10 @@
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
                     <th scope="col">Address</th>
+                     <th scope="col">Course</th>
+                     <th scope="col">Day of week</th>
+                      <th scope="col">Time</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -149,6 +153,9 @@
                         <td>@students.StudentsPhone</td>
                         <td>@students.StudentsEmail</td>
                         <td>@students.StudentsAddress</td>
+                        <td>@students.Studentscourse</td>
+                         <td>@students.Studentsdayofweek</td>
+                         <td>@students.Studentstime</td>
                         <td>
                             <a asp-page="/Student/EditStudent" asp-route-itemid="@students.StudentsID" class="btn btn-primary">Edit</a>
                             <form method="post" asp-page-handler="Delete" asp-route-id="@students.StudentsID">

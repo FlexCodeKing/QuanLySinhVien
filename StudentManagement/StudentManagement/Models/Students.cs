@@ -26,6 +26,9 @@ namespace StudentManagement.Models
         {
             get; set;
         }
+        public string? Studentscourse { get; set; }
 
+        public string? Studentsdayofweek { get; set; }
+        public string? Studentstime { get; set; }
     }
 }

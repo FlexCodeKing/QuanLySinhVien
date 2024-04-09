@@ -30,7 +30,7 @@ namespace StudentManagement.DataContexts
                         string line = reader.ReadLine();
                         string[] values = line.Split(',');
 
-                        if (values.Length >= 7) 
+                        if (values.Length >= 10) 
                         {
                             Students student = new Students
                             {
@@ -41,6 +41,9 @@ namespace StudentManagement.DataContexts
                                 StudentsAddress = values[4],
                                 Studentsusername = values[5],
                                 Studentspassword = values[6],
+                                Studentscourse = values[7],
+                                Studentsdayofweek = values[8],
+                                Studentstime = values[9],
                             };
 
                             Student.Add(student);
@@ -60,12 +63,12 @@ namespace StudentManagement.DataContexts
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                writer.WriteLine("StudentsID, StudentsName, StudentsPhone, StudentsEmail, StudentsAddress, Studentsusername,Studentspassword");
+                writer.WriteLine("StudentsID, StudentsName, StudentsPhone, StudentsEmail, StudentsAddress, Studentsusername,Studentspassword,Studentscourse,Studentsdayofweek,Studentstime");
 
                 foreach(var student in Student)
                 {
                     writer.WriteLine($"{student.StudentsID},{student.StudentsName},{student.StudentsPhone},{student.StudentsEmail}," +
-                        $"{student.StudentsAddress},{student.Studentsusername},{student.Studentspassword}, {student.Studentsusername},{student.Studentspassword}");
+                        $"{student.StudentsAddress},{student.Studentsusername},{student.Studentspassword}, {student.Studentsusername},{student.Studentspassword},{student.Studentscourse},{student.Studentsdayofweek},{student.Studentstime}");
                 }
             }
         }
@@ -95,6 +98,9 @@ namespace StudentManagement.DataContexts
                 existingStudent.StudentsAddress = updatedStudent.StudentsAddress;
                 existingStudent.Studentsusername = updatedStudent.Studentsusername;
                 existingStudent.Studentspassword = updatedStudent.Studentspassword;
+                existingStudent.Studentscourse = updatedStudent.Studentscourse;
+                existingStudent.Studentsdayofweek = updatedStudent.Studentsdayofweek;
+                existingStudent.Studentstime = updatedStudent.Studentstime;
 
                 WriteDataToCsv(filePath);
             }

@@ -1,10 +1,11 @@
-StudentsID, StudentsName, StudentsPhone, StudentsEmail, StudentsAddress, Studentsusername,Studentspassword
-1,Tran Minh Hieu,0327593476,hieu12@gmail.com,Hai Phong,,, ,
-2,Pham Huy Hoang,22222,hoang@gmail.com,Tp Ho Chi Minh,,, ,
-3,Nguyen Phi Hao,33333,hao@gmail.com,Tp Ho Chi Minh,,, ,
-4,Nguyen Van Bao Loc,44444,loc@gmail.com,Ba Ria Vung Tau,,, ,
-5,Nguyen Tran Hong Son,55555,son@gmail.com,Tp Ho Chi Minh,,, ,
-6,Nguyen Quoc Thai,66666,thai@gmail.com,Tp Ho Chi Minh,,, ,
-7,Tran Van A,77777,a@gmail.com,Tp Ho Chi Minh,,, ,
-8,Nguyen Van B ,88888,b@gmail.com,Tp Ho Chi Minh,,, ,
-9,Pham Van C,99999,c@gmail.com,Tp Ho Chi Minh,,, ,
+StudentsID, StudentsName, StudentsPhone, StudentsEmail, StudentsAddress, Studentsusername,Studentspassword,Studentscourse,Studentsdayofweek,Studentstime
+1,Tran Minh Hieu,0327593476,hieu@gmail.com,Hai Phong,hieu123,student123,DataDesign,Monday,7A.M-11A.M
+2,Pham Huy Hoang,22222,hoang@gmail.com,Tp Ho Chi Minh,Hisndj,HUIjjdjsk,ApplicationProgram,Tuseday,9A.M-11A.M
+3,Nguyen Phi Hao,33333,hao@gmail.com,Tp Ho Chi Minh,Hkdscbd,Nohdsn,DataDesign,Monday,7A.M-11A.M
+4,Nguyen Van Bao Loc,44444,loc@gmail.com,Ba Ria Vung Tau,Gjkl,GHJKB23,ApplicationProgram,Tuseday,9A.M-11A.M
+5,Nguyen Tran Hong Son,55555,son@gmail.com,Tp Ho Chi Minh,ApplicationProgram,Tuseday,9A.M-11A.M
+6,Nguyen Quoc Thai,66666,thai@gmail.com,Tp Ho Chi Minh,ANLBJK,dskjnkedb,DSA,Monday,3P.M-5P.M
+7,Tran Van A,77777,a@gmail.com,Tp Ho Chi Minh,bkjdslcbfdkl,vhrif24,DataDesign,Monday,7A.M-11A.M
+8,Nguyen Van B ,88888,b@gmail.com,Tp Ho Chi Minh,jrh348,ubeugc77,DSA,Monday,3P.M-5P.M
+9,Pham Van C,99999,c@gmail.com,Tp Ho Chi Minh,idnc,gyust,BusinessInteligence,Wednesday,9A.M-11A.M
+10,Tran Nguyen D,12345,d@gmail.com,Tp Ho Chi Minh,student1,student123,DataDesign,Monday,7A.M-11A.M
