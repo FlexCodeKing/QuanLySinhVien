@@ -187,13 +187,14 @@
             $("role").change(function () {
                 var role = $(this).val();
                 if (role === "manager") {
-                    $("username").attr("placeholder", "Nhập tên đăng nhập quản lý");
-                    $("password").attr("placeholder", "Nhập mật khẩu quản lý");
+                    $("username").attr("placeholder", "Manager's username");
+                    $("password").attr("placeholder", "Manager's password");
                 } else {
-                    $("username").attr("placeholder", "Nhập tên đăng nhập học sinh");
-                    $("password").attr("placeholder", "Nhập mật khẩu học sinh");
+                    $("username").attr("placeholder", "Student's username");
+                    $("password").attr("placeholder", "Student's password");
                 }
             });
         });
     </script>
+    <partial name="_ValidationScriptsPartial" />
 }

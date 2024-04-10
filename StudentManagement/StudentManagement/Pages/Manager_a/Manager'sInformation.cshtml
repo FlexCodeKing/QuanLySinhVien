@@ -117,11 +117,11 @@
         <input asp-for="NewInfor.Username" class="form-control" />
         <span asp-validation-for="NewInfor.Username" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="NewInfor.Password" class="control-label"></label>
-        <input asp-for="NewInfor.Password" class="form-control" />
-        <span asp-validation-for="NewInfor.Password" class="text-danger"></span>
-    </div>
+            <div class="form-group">
+                <label asp-for="NewInfor.Password" class="control-label"></label>
+                <input asp-for="NewInfor.Password" class="form-control" type="password" />
+                <span asp-validation-for="NewInfor.Password" class="text-danger"></span>
+            </div>
     <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />
     </div>
@@ -151,7 +151,10 @@
                 <td>@manager.Email</td>
                 <td>@manager.Address</td>
                 <td>@manager.Username</td>
-                <td>@manager.Password</td>
+                <td>
+                    <span>*********</span>
+                </td>
+
                 <td>
                     <a asp-page="/Manager_a/EditManager" asp-route-itemid="@manager.Id" class="btn btn-primary">Edit</a>
                     <form method="post" asp-page-handler="Delete" asp-route-id="@manager.Id">
